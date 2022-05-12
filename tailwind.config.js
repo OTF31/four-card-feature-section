@@ -10,7 +10,8 @@ module.exports = {
       GrayishBlue: "hsl(229, 6%, 66%)",
       VeryLigthGray: "hsl(0, 0%, 98%)",
     },
-    extends: {},
+    fontFamily: { Poppins: "Poppins" },
+    extend: {},
   },
   plugins: [],
 };
