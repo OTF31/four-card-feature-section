@@ -1,61 +1,63 @@
-import Card from "./components/Card";
-import IconSupervisor from "./assets/icon-supervisor.svg";
-import IconTeamBuilder from "./assets/icon-team-builder.svg";
-import IconKarma from "./assets/icon-karma.svg";
-import IconCalculator from "./assets/icon-calculator.svg";
+import { Box, Text, Heading, Center, VStack, Stack } from "native-base";
+
+import CustomCard from "./components/CustomCard";
+import supervisorIcon from "./assets/icon-supervisor.svg";
+import teambuilderIcon from "./assets/icon-team-builder.svg";
+import karmaIcon from "./assets/icon-karma.svg";
+import calculatorIcon from "./assets/icon-calculator.svg";
 
 const App = () => {
   return (
     <>
-      <div
-        role="application"
-        className="min-h-screen flex items-center justify-center bg-VeryLigthGray pb-[70px]"
+      <Box
+        bg={"VeryLightGray"}
+        minHeight={"100vh"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        px={4}
+        py={2}
       >
-        <div className="flex flex-col">
-          <div className="font-Poppins text-center mt-[85px] px-7">
-            <h1 className="font-[200] text-[1.52em]">
-              Reliable, efficient delivery
-            </h1>
-            <h2 className="font-[600] text-VeryDarkBlue text-[1.52em]">
-              Powered by Technology
-            </h2>
-            <p className="text-GrayishBlue mt-[16px] leading-6 text-[0.95em]">
-              Our Artificial Intelligence powered tools use millions of project
-              data points to ensure that your project is successful
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-[23px] mt-[75px]">
-            <Card
-              topColor="bg-Cyan"
-              title="Supervisor"
-              paragraph="Monitors activity to identify project roadblocks"
-              image={IconSupervisor}
+        <Center mb={6}>
+          <Heading fontWeight={200} color={"VeryDarkBlue"}>
+            Reliable, efficient delivery
+          </Heading>
+          <Heading color={"VeryDarkBlue"} mb={3}>
+            Powered by Technology
+          </Heading>
+          <Text color={"GrayishBlue"} fontSize={"sm"} textAlign={"center"}>
+            Our Artifical Intelligence powered tools use millions of project data points to ensure
+            that your proyects is successful
+          </Text>
+        </Center>
+        <Stack direction={{ base: "column", lg: "row" }} space={5} alignItems={"center"}>
+          <CustomCard
+            topColor={"Cyan"}
+            title={"Supervisor"}
+            paragraph={"Monitors activity to identify project roadblocks"}
+            icon={supervisorIcon}
+          />
+          <VStack space={5}>
+            <CustomCard
+              topColor={"Red"}
+              title={"Team Builder"}
+              paragraph={"Scans our talent network to create the optimal team for your proyect"}
+              icon={teambuilderIcon}
             />
-
-            <Card
-              topColor="bg-Red"
-              title="Team Builder"
-              paragraph="Scans our talent network to create the optimal team for your project"
-              image={IconTeamBuilder}
+            <CustomCard
+              topColor={"Orange"}
+              title={"Karma"}
+              paragraph={"Regurlarly evaluates our talent to ensure quality"}
+              icon={karmaIcon}
             />
-
-            <Card
-              topColor="bg-Orange"
-              title="Karma"
-              paragraph="Regularly evaluates our talent to ensure quality"
-              image={IconKarma}
-            />
-
-            <Card
-              topColor="bg-Blue"
-              title="Calculator"
-              paragraph="Uses data from past projects to provide better delivery estimates"
-              image={IconCalculator}
-            />
-          </div>
-        </div>
-      </div>
+          </VStack>
+          <CustomCard
+            topColor={"Blue"}
+            title={"Calculator"}
+            paragraph={"Uses data from past projects to provide better delivery estimates"}
+            icon={calculatorIcon}
+          />
+        </Stack>
+      </Box>
     </>
   );
 };
