@@ -4,6 +4,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ---
 
-[See in Github Pages](https://denisomarcuyottito.github.io/four-card-feature-section/)
+[See in Github Pages](https://OTF31.github.io/four-card-feature-section/)
 
 ![image](https://user-images.githubusercontent.com/75378049/190919344-26e9836d-ddae-48fc-81b5-fe0b4d4098e9.png)
